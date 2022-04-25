@@ -1,0 +1,346 @@
+/* ====================BASE==================== */
+@font-face {
+    font-family: "myfont";
+    src: url("../Font/B_Koodak_Bold-.ttf") format("trutype"),
+        url("../Font/BKoodakBold.woff") format("woff"),
+        url("../Font/B_Koodak_Bold-.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: myfont;
+}
+
+ul,
+li,
+ol {
+    display: block;
+}
+
+.container {
+    transition: all 0.5s;
+}
+
+
+
+/* ====================NAV==================== */
+
+header {
+    box-shadow: 0px 1px 10px 0px rgb(109, 109, 109);
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-layout {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    transition: all 0.5s;
+    display: block;
+}
+
+.navbar>ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: myfont;
+    font-size: 25px;
+    transition: all 1s;
+
+}
+
+.navbar>ul>li {
+    display: block;
+}
+
+.navbar>ul>li a span {
+    padding: 10px;
+    padding-left: 20px;
+    color: black;
+}
+
+.navbar>ul>li a span:hover {
+    color: blue;
+    text-decoration: underline 5px blue;
+    text-underline-offset: 30px;
+
+}
+
+.menu_sid_icon {
+    display: none;
+}
+
+
+div.nav-logo>img {
+    width: 100px;
+}
+
+.menu_close {
+    display: none;
+}
+
+
+
+/* ====================NAV_SIDBAR=================== */
+
+@media(max-width:767px) {
+
+    .navbar {
+        display: none;
+
+    }
+
+    .navbar-show {
+        display: block;
+        position: absolute;
+    }
+
+    .navbar>ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #1b1464;
+        height: 100vh;
+        width: 0;
+    }
+
+    .navbar>.navbar_ul_show {
+        animation: navbar-ul-show 0.5s normal 0s 1 forwards;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @keyframes navbar-ul-show {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 70%;
+        }
+    }
+
+    .navbar>.navbar_ul_close {
+        animation: navbar-ul-close 0.5s normal 0s 1 forwards;
+    }
+
+    @keyframes navbar-ul-close {
+        0% {
+            width: 70%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    .navbar>ul>li a span {
+        color: white;
+    }
+
+    .navbar>ul>li a span:hover {
+        color: white;
+        text-decoration-color: white;
+    }
+
+    .navbar>ul>li {
+        padding: 20px;
+        padding-bottom: 40px;
+        /* text-align: center; */
+        display: block;
+    }
+
+    .menu_sid_icon {
+        display: block;
+    }
+
+    ul#navbar_ul>div {
+        padding: 15px;
+    }
+
+    .menu_close {
+        display: block;
+        color: white;
+        float: left;
+        transform: scale(2);
+        margin: 10px;
+    }
+
+}
+
+/* ====================SECTION=================== */
+
+
+
+/* ====================HOME=================== */
+/* ====================HOME-TEXT=================== */
+main {
+    padding: 20px 0 0;
+}
+
+
+.home>div.container>div.row {
+    align-items: center;
+}
+
+.home {
+    text-align: center;
+    padding: 8rem 0 0;
+}
+
+@media(min-width:1200px){
+    .home {
+        text-align: center;
+        padding: 4rem 0 0;
+    }
+}
+
+.home_text>h1 {
+    font-size: 65px;
+}
+
+.home_text>p {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.home_text>button {
+    transition: all 0.2s;
+    background-color: rgb(46 49 146);
+    border-radius: 10px;
+    border: 0;
+    height: 56px;
+    margin-top: 20px;
+
+}
+
+.home_text>button:hover {
+    box-shadow: 0px 0px 7px 4px #7b7be79c;
+}
+
+.home_text>button>a {
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+}
+
+.contact {
+    font-size: 35px;
+    color: #2e3192;
+    /* margin: 30px; */
+    margin-top: 30px;
+}
+
+.contact>i:hover {
+    text-shadow: 0px 0px 5px #7b7be79c;
+}
+
+.home_profile>i {
+    font-size: 400px;
+    text-align: center;
+    color: #1b1464;
+}
+
+/* ====================SKILL=================== */
+.background {
+    direction: ltr;
+    background-image: url("../IMG/background-atachmant-skill.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color;
+    background-color: #000000b3;
+}
+
+.padding {
+    padding: 9rem 0 0;
+}
+
+.skill_item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.skil .skill_item>ol {
+    line-height: 100px;
+}
+
+.skill_img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill_img img {
+    background-origin: padding-box;
+    padding: 10px;
+}
+
+/* ====================Footer=================== */
+footer{
+    background-color: #1b1464;
+}
+
+footer > div {
+    color:white;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+
+@media(max-width:1200px) {
+    .home_text>h1 {
+        font-size: 50px;
+    }
+
+    .home_text>p {
+        font-size: 25px;
+    }
+
+    .home_profile>i {
+        font-size: 300px;
+    }
+}
+
+@media(max-width:576px) {
+    .home_text>h1 {
+        font-size: 40px;
+    }
+
+    .home_text>p {
+        font-size: 25px;
+    }
+
+    .home_profile>i {
+        font-size: 250px;
+    }
+
+
+
+    .skill_item{
+        color: black;
+    }
+    .background {
+        background-image: none;
+        background-color: transparent;
+    }
+}
