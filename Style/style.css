@@ -319,6 +319,10 @@ footer > div {
     .home_profile>i {
         font-size: 300px;
     }
+
+    footer > div{
+        font-size: 20px;
+    }
 }
 
 @media(max-width:576px) {
@@ -338,9 +342,15 @@ footer > div {
 
     .skill_item{
         color: black;
+        font-size: 40px;
     }
     .background {
         background-image: none;
         background-color: transparent;
+    }
+
+
+    footer > div{
+        font-size: 18px;
     }
 }
